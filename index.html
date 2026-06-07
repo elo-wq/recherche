@@ -1,25 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>PDF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF — Net Art</title>
   <style>
+    /* Reset et style de base brut/minimaliste */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #fff;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: monospace; /* Style net art classique */
+      overflow: hidden; /* Évite les doubles barres de défilement */
     }
+
+    /* Conteneur principal en Flexbox */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Texte de présentation épuré */
+    .intro {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #000000; /* Ligne de séparation brute */
+      text-transform: lowercase; /* Style minimaliste */
+    }
+
+    /* Zone du PDF */
+    .pdf-container {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+    }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-<p> elo </p>
-  <iframe src="ton-fichier.pdf"></iframe>
+
+  <div class="intro">
+    elo
+  </div>
+
+  <div class="pdf-container">
+    <iframe src="ton-fichier.pdf"></iframe>
+  </div>
 
 </body>
 </html>
